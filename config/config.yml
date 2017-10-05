@@ -1,12 +1,7 @@
-# Set this to 'true' and 'build_makefile', 'build_composer' to 'false' if you
-# are using Composer's create-project as a site deployment strategy.
 drupal_build_composer_project: false
-
-# Set 'build_makefile' to 'false' and this to 'true' if you are using a
-# composer based site deployment strategy.
 drupal_build_composer: true
 drupal_composer_path: false
-drupal_composer_install_dir: "/var/www/drupal"
+drupal_composer_install_dir: "/var/www/drupalvm/drupal"
 drupal_core_path: "{{ drupal_composer_install_dir }}/web"
 
 # If you need to run multiple instances of Drupal VM, set a unique hostname,
@@ -23,7 +18,7 @@ vagrant_synced_folders:
   # any of the build_* settings are 'true'. By default the folder is set to
   # the drupal-vm folder.
   - local_path: .
-    destination: /var/www/drupal
+    destination: /var/www/drupalvm/drupal
     type: nfs
     create: true
 
@@ -32,19 +27,19 @@ vagrant_synced_folders:
 installed_extras:
   # - adminer
   # - blackfire
-  # - drupalconsole
+  - drupalconsole
   - drush
-  # - elasticsearch
+  - elasticsearch
   # - java
-  - mailhog
-  # - memcached
+  # - mailhog
+  - memcached
   # - newrelic
   # - nodejs
   - pimpmylog
-  # - redis
+  - redis
   # - ruby
   # - selenium
-  # - solr
+  - solr
   # - tideways
   # - upload-progress
   # - varnish
