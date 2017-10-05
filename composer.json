@@ -62,11 +62,7 @@
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "run-tests": "vendor/geerlingguy/drupal-vm/tests/run-tests.sh",
-        "docker-bake": "vendor/geerlingguy/drupal-vm/provisioning/docker/bake.sh",
-        "docker-save-image": "vendor/geerlingguy/drupal-vm/provisioning/docker/save-image.sh",
-        "docker-load-image": "vendor/geerlingguy/drupal-vm/provisioning/docker/load-image.sh"
+        ]
     },
     "extra": {
         "installer-paths": {
